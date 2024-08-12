@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+</head>
+<body>
+    <h1>Welcome to your home page!</h1>
+    <h2>Your Contacts:</h2>
+    <ul>
+        {% for contact in contacts %}
+            <li>
+                {{ contact[1] }} {{ contact[2] }} - {{ contact[3] }} - {{ contact[4] }}
+            </li>
+        {% else %}
+            <li>No contacts found.</li>
+        {% endfor %}
+    </ul>
+    <a href="{{ url_for('add_contact') }}">Add a new contact</a>
+    <a href="{{ url_for('logout') }}">Logout</a>
+</body>
+</html>
