@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page - Event Management App</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <style>
+        .hero-section {
+            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://via.placeholder.com/1500x500') center/cover no-repeat;
+            color: white;
+            padding: 80px 0;
+        }
+        .hero-section h1 {
+            font-size: 3rem;
+            font-weight: bold;
+        }
+        .feature-box {
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .feature-box h4 {
+            font-size: 1.25rem;
+            margin-bottom: 15px;
+        }
+        .btn-custom {
+            background-color: #007bff;
+            color: white;
+            border: none;
+        }
+        .btn-custom:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+
+<div class="hero-section text-center">
+    <div class="container">
+        <h1>Welcome to EventManager</h1>
+        <p>Your ultimate solution for managing and discovering events</p>
+        {% if session['user_id'] %}
+            <a href="{{ url_for('create_event') }}" class="btn btn-custom btn-lg">Create Your Event</a>
+        {% else %}
+            <a href="{{ url_for('login') }}" class="btn btn-custom btn-lg">Login to Get Started</a>
+        {% endif %}
+    </div>
+</div>
+
+<div class="container mt-4">
+    <div class="row">
+        <div class="col-md-4 mb-4">
+            <div class="feature-box text-center">
+                <h4>Create Events</h4>
+                <p>Easily create and manage your own events. Add all the necessary details and invite friends.</p>
+                {% if session['user_id'] %}
+                    <a href="{{ url_for('create_event') }}" class="btn btn-custom">Create Event</a>
+                {% else %}
+                    <a href="{{ url_for('login') }}" class="btn btn-custom">Login to Create</a>
+                {% endif %}
+            </div>
+        </div>
+        <div class="col-md-4 mb-4">
+            <div class="feature-box text-center">
+                <h4>View Events</h4>
+                <p>Discover exciting events happening around you. Browse through various categories and find something you love.</p>
+                <a href="{{ url_for('events') }}" class="btn btn-custom">Explore Events</a>
+            </div>
+        </div>
+        <div class="col-md-4 mb-4">
+            <div class="feature-box text-center">
+                <h4>Your Profile</h4>
+                <p>Update your personal information and manage your shared events from your profile.</p>
+                {% if session['user_id'] %}
+                    <a href="{{ url_for('profile') }}" class="btn btn-custom">View Profile</a>
+                {% else %}
+                    <a href="{{ url_for('login') }}" class="btn btn-custom">Login to Access</a>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+
+    <div class="text-center mt-4">
+        {% if session['user_id'] %}
+            <a href="{{ url_for('logout') }}" class="btn btn-custom btn-lg">Logout</a>
+        {% endif %}
+    </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

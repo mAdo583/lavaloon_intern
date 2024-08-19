@@ -1,0 +1,8 @@
+Flask==2.2.5
+Werkzeug==2.2.5
+flask-sqlalchemy==3.0.0  # or another compatible version
+flask-wtf==1.0.1
+flask-jwt-extended==4.4.0
+bcrypt==4.0.1
+
+WTForms~=3.0.1

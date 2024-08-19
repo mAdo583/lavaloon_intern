@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Event</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <style>
+        .hero-section {
+            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://via.placeholder.com/1500x500') center/cover no-repeat;
+            color: white;
+            padding: 80px 0;
+        }
+        .hero-section h1 {
+            font-size: 3rem;
+            font-weight: bold;
+        }
+        .feature-box {
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .btn-custom {
+            background-color: #007bff;
+            color: white;
+            border: none;
+        }
+        .btn-custom:hover {
+            background-color: #0056b3;
+        }
+        .form-control, .form-select {
+            border-radius: .25rem;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="hero-section text-center">
+        <div class="container">
+            <h1>Create Your Event</h1>
+            <p>Fill out the form below to set up a new event. Make sure to provide all the details to make your event a success!</p>
+        </div>
+    </div>
+
+
+    <div class="container mt-4">
+        <div class="row">
+            <div class="col-md-8 offset-md-2">
+                <div class="feature-box">
+                    <h2 class="text-center mb-4">Event Details</h2>
+                    <form action="{{ url_for('create_event') }}" method="POST" enctype="multipart/form-data">
+                        {{ form.hidden_tag() }}
+                        <div class="mb-3">
+                            {{ form.Event_type.label(class="form-label") }}
+                            {{ form.Event_type(class="form-select", id="event_type") }}
+                        </div>
+
+                        <div class="mb-3">
+                            {{ form.Event_name.label(class="form-label") }}
+                            {{ form.Event_name(class="form-control") }}
+                        </div>
+                        <div class="mb-3">
+                            {{ form.Event_location.label(class="form-label") }}
+                            {{ form.Event_location(class="form-control") }}
+                        </div>
+                        <div class="mb-3">
+                            {{ form.Event_time.label(class="form-label") }}
+                            {{ form.Event_time(class="form-control") }}
+                        </div>
+                        <div class="mb-3">
+                            {{ form.additional_info.label(class="form-label") }}
+                            {{ form.additional_info(class="form-control") }}
+                        </div>
+
+                        <div id="concert-fields" style="display: none;">
+                            <div class="mb-3">
+                                {{ form.singer_name.label(class="form-label") }}
+                                {{ form.singer_name(class="form-control") }}
+                            </div>
+                        </div>
+
+                        <div id="party-fields" style="display: none;">
+                            <div class="mb-3">
+                                {{ form.party_place.label(class="form-label") }}
+                                {{ form.party_place(class="form-control") }}
+                            </div>
+                            <div class="mb-3">
+                                {{ form.party_type.label(class="form-label") }}
+                                {{ form.party_type(class="form-control") }}
+                            </div>
+                            <div class="mb-3">
+                                {{ form.dresscode.label(class="form-label") }}
+                                {{ form.dresscode(class="form-control") }}
+                            </div>
+                        </div>
+
+                        <div id="festival-fields" style="display: none;">
+                            <div class="mb-3">
+                                {{ form.festival_name.label(class="form-label") }}
+                                {{ form.festival_name(class="form-control") }}
+                            </div>
+                            <div class="mb-3">
+                                {{ form.festival_type.label(class="form-label") }}
+                                {{ form.festival_type(class="form-control") }}
+                            </div>
+                            <div class="mb-3">
+                                {{ form.festival_purpose.label(class="form-label") }}
+                                {{ form.festival_purpose(class="form-control") }}
+                            </div>
+                        </div>
+
+                        <div id="sports-fields" style="display: none;">
+                            <div class="mb-3">
+                                {{ form.sport_type.label(class="form-label") }}
+                                {{ form.sport_type(class="form-control") }}
+                            </div>
+                            <div class="mb-3">
+                                {{ form.teams_involved.label(class="form-label") }}
+                                {{ form.teams_involved(class="form-control") }}
+                            </div>
+                        </div>
+
+
+                        <div class="mb-3">
+                            {{ form.event_image.label(class="form-label") }}
+                            {{ form.event_image(class="form-control") }}
+                        </div>
+
+                        <div class="mb-3 text-center">
+                            <button type="submit" class="btn btn-custom btn-lg">Create Event</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('event_type').addEventListener('change', function () {
+            var value = this.value;
+            document.getElementById('concert-fields').style.display = (value === 'concert') ? 'block' : 'none';
+            document.getElementById('party-fields').style.display = (value === 'party') ? 'block' : 'none';
+            document.getElementById('festival-fields').style.display = (value === 'festival') ? 'block' : 'none';
+            document.getElementById('sports-fields').style.display = (value === 'sports') ? 'block' : 'none';
+        });
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
