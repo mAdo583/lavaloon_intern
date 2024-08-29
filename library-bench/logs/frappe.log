@@ -1,0 +1,9 @@
+2024-08-29 13:16:40,826 ERROR frappe New Exception collected in error log
+Site: library.localhost
+Form Dict: {'doctype': 'Library Member', 'with_parent': '1', 'cached_timestamp': '2024-08-29 13:14:21.277926', 'cmd': 'frappe.desk.form.load.getdoctype'}
+2024-08-29 13:17:20,521 ERROR frappe New Exception collected in error log
+Site: library.localhost
+Form Dict: {'doctype': 'Library Member', 'with_parent': '1', 'cached_timestamp': '2024-08-29 13:14:21.277926', 'cmd': 'frappe.desk.form.load.getdoctype'}
+2024-08-29 13:18:45,092 ERROR frappe New Exception collected in error log
+Site: library.localhost
+Form Dict: {'doctype': 'Library Member', 'with_parent': '1', 'cached_timestamp': '', 'cmd': 'frappe.desk.form.load.getdoctype'}

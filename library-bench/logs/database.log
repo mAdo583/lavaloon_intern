@@ -1,0 +1,1217 @@
+2024-08-29 12:50:20,007 WARNING database DDL Query made to DB:
+create table `tabDashboard Chart Field` (
+			name varchar(140) primary key,
+			creation datetime(6),
+			modified datetime(6),
+			modified_by varchar(140),
+			owner varchar(140),
+			docstatus tinyint not null default '0',
+			idx int not null default '0',
+			`y_field` varchar(140),
+`color` varchar(140),
+parent varchar(140),
+parentfield varchar(140),
+parenttype varchar(140),
+index parent(parent))
+			ENGINE=InnoDB
+			ROW_FORMAT=DYNAMIC
+			CHARACTER SET=utf8mb4
+			COLLATE=utf8mb4_unicode_ci
+2024-08-29 12:50:20,045 WARNING database DDL Query made to DB:
+create table `tabKanban Board Column` (
+			name varchar(140) primary key,
+			creation datetime(6),
+			modified datetime(6),
+			modified_by varchar(140),
+			owner varchar(140),
+			docstatus tinyint not null default '0',
+			idx int not null default '0',
+			`column_name` varchar(140),
+`status` varchar(140) DEFAULT 'Active',
+`indicator` varchar(140) DEFAULT 'Gray',
+`order` longtext,
+parent varchar(140),
+parentfield varchar(140),
+parenttype varchar(140),
+index parent(parent))
+			ENGINE=InnoDB
+			ROW_FORMAT=DYNAMIC
+			CHARACTER SET=utf8mb4
+			COLLATE=utf8mb4_unicode_ci
+2024-08-29 12:50:20,081 WARNING database DDL Query made to DB:
+create table `tabChangelog Feed` (
+			name varchar(140) primary key,
+			creation datetime(6),
+			modified datetime(6),
+			modified_by varchar(140),
+			owner varchar(140),
+			docstatus tinyint not null default '0',
+			idx int not null default '0',
+			`title` varchar(140),
+`app_name` varchar(140),
+`link` longtext,
+`posting_timestamp` datetime(6),
+`_user_tags` text,
+`_comments` text,
+`_assign` text,
+`_liked_by` text,
+index `posting_timestamp`(`posting_timestamp`),
+index creation(creation))
+			ENGINE=InnoDB
+			ROW_FORMAT=DYNAMIC
+			CHARACTER SET=utf8mb4
+			COLLATE=utf8mb4_unicode_ci
+2024-08-29 12:50:20,117 WARNING database DDL Query made to DB:
+create table `tabCalendar View` (
+			name varchar(140) primary key,
+			creation datetime(6),
+			modified datetime(6),
+			modified_by varchar(140),
+			owner varchar(140),
+			docstatus tinyint not null default '0',
+			idx int not null default '0',
+			`reference_doctype` varchar(140),
+`subject_field` varchar(140),
+`start_date_field` varchar(140),
+`end_date_field` varchar(140),
+`all_day` tinyint NOT NULL DEFAULT 0,
+`_user_tags` text,
+`_comments` text,
+`_assign` text,
+`_liked_by` text,
+index creation(creation))
+			ENGINE=InnoDB
+			ROW_FORMAT=DYNAMIC
+			CHARACTER SET=utf8mb4
+			COLLATE=utf8mb4_unicode_ci
+2024-08-29 12:50:20,182 WARNING database DDL Query made to DB:
+create table `tabList Filter` (
+			name varchar(140) primary key,
+			creation datetime(6),
+			modified datetime(6),
+			modified_by varchar(140),
+			owner varchar(140),
+			docstatus tinyint not null default '0',
+			idx int not null default '0',
+			`filter_name` varchar(140),
+`reference_doctype` varchar(140),
+`for_user` varchar(140),
+`filters` longtext,
+`_user_tags` text,
+`_comments` text,
+`_assign` text,
+`_liked_by` text,
+index creation(creation))
+			ENGINE=InnoDB
+			ROW_FORMAT=DYNAMIC
+			CHARACTER SET=utf8mb4
+			COLLATE=utf8mb4_unicode_ci
+2024-08-29 12:50:20,222 WARNING database DDL Query made to DB:
+create table `tabNumber Card Link` (
+			name varchar(140) primary key,
+			creation datetime(6),
+			modified datetime(6),
+			modified_by varchar(140),
+			owner varchar(140),
+			docstatus tinyint not null default '0',
+			idx int not null default '0',
+			`card` varchar(140),
+parent varchar(140),
+parentfield varchar(140),
+parenttype varchar(140),
+index parent(parent))
+			ENGINE=InnoDB
+			ROW_FORMAT=DYNAMIC
+			CHARACTER SET=utf8mb4
+			COLLATE=utf8mb4_unicode_ci
+2024-08-29 12:50:20,353 WARNING database DDL Query made to DB:
+create table `tabWebhook` (
+			name varchar(140) primary key,
+			creation datetime(6),
+			modified datetime(6),
+			modified_by varchar(140),
+			owner varchar(140),
+			docstatus tinyint not null default '0',
+			idx int not null default '0',
+			`webhook_doctype` varchar(140),
+`webhook_docevent` varchar(140),
+`enabled` tinyint NOT NULL DEFAULT 1,
+`condition` text,
+`request_url` text,
+`is_dynamic_url` tinyint NOT NULL DEFAULT 0,
+`timeout` int NOT NULL DEFAULT 5,
+`background_jobs_queue` varchar(140),
+`request_method` varchar(140) DEFAULT 'POST',
+`request_structure` varchar(140),
+`enable_security` tinyint NOT NULL DEFAULT 0,
+`webhook_secret` text,
+`webhook_json` longtext,
+`_user_tags` text,
+`_comments` text,
+`_assign` text,
+`_liked_by` text,
+index creation(creation))
+			ENGINE=InnoDB
+			ROW_FORMAT=DYNAMIC
+			CHARACTER SET=utf8mb4
+			COLLATE=utf8mb4_unicode_ci
+2024-08-29 12:50:20,496 WARNING database DDL Query made to DB:
+create table `tabWebhook Request Log` (
+			name varchar(140) primary key,
+			creation datetime(6),
+			modified datetime(6),
+			modified_by varchar(140),
+			owner varchar(140),
+			docstatus tinyint not null default '0',
+			idx int not null default '0',
+			`webhook` varchar(140),
+`reference_document` varchar(140),
+`headers` longtext,
+`data` longtext,
+`user` varchar(140),
+`url` varchar(140),
+`response` longtext,
+`error` text,
+`_user_tags` text,
+`_comments` text,
+`_assign` text,
+`_liked_by` text,
+index creation(creation))
+			ENGINE=InnoDB
+			ROW_FORMAT=DYNAMIC
+			CHARACTER SET=utf8mb4
+			COLLATE=utf8mb4_unicode_ci
+2024-08-29 12:50:20,535 WARNING database DDL Query made to DB:
+create table `tabToken Cache` (
+			name varchar(140) primary key,
+			creation datetime(6),
+			modified datetime(6),
+			modified_by varchar(140),
+			owner varchar(140),
+			docstatus tinyint not null default '0',
+			idx int not null default '0',
+			`user` varchar(140),
+`connected_app` varchar(140),
+`provider_name` varchar(140),
+`access_token` text,
+`refresh_token` text,
+`expires_in` int NOT NULL DEFAULT 0,
+`state` varchar(140),
+`success_uri` varchar(140),
+`token_type` varchar(140),
+`_user_tags` text,
+`_comments` text,
+`_assign` text,
+`_liked_by` text,
+index creation(creation))
+			ENGINE=InnoDB
+			ROW_FORMAT=DYNAMIC
+			CHARACTER SET=utf8mb4
+			COLLATE=utf8mb4_unicode_ci
+2024-08-29 12:50:20,579 WARNING database DDL Query made to DB:
+create table `tabLDAP Group Mapping` (
+			name varchar(140) primary key,
+			creation datetime(6),
+			modified datetime(6),
+			modified_by varchar(140),
+			owner varchar(140),
+			docstatus tinyint not null default '0',
+			idx int not null default '0',
+			`ldap_group` varchar(140),
+`erpnext_role` varchar(140),
+parent varchar(140),
+parentfield varchar(140),
+parenttype varchar(140),
+index parent(parent))
+			ENGINE=InnoDB
+			ROW_FORMAT=DYNAMIC
+			CHARACTER SET=utf8mb4
+			COLLATE=utf8mb4_unicode_ci
+2024-08-29 12:50:20,619 WARNING database DDL Query made to DB:
+create table `tabIntegration Request` (
+			name varchar(140) primary key,
+			creation datetime(6),
+			modified datetime(6),
+			modified_by varchar(140),
+			owner varchar(140),
+			docstatus tinyint not null default '0',
+			idx int not null default '0',
+			`request_id` varchar(140),
+`integration_request_service` varchar(140),
+`is_remote_request` tinyint NOT NULL DEFAULT 0,
+`request_description` varchar(140),
+`status` varchar(140) DEFAULT 'Queued',
+`url` text,
+`request_headers` longtext,
+`data` longtext,
+`output` longtext,
+`error` longtext,
+`reference_doctype` varchar(140),
+`reference_docname` varchar(140),
+`_user_tags` text,
+`_comments` text,
+`_assign` text,
+`_liked_by` text,
+index creation(creation))
+			ENGINE=InnoDB
+			ROW_FORMAT=DYNAMIC
+			CHARACTER SET=utf8mb4
+			COLLATE=utf8mb4_unicode_ci
+2024-08-29 12:50:20,780 WARNING database DDL Query made to DB:
+create table `tabOAuth Client` (
+			name varchar(140) primary key,
+			creation datetime(6),
+			modified datetime(6),
+			modified_by varchar(140),
+			owner varchar(140),
+			docstatus tinyint not null default '0',
+			idx int not null default '0',
+			`client_id` varchar(140),
+`app_name` varchar(140),
+`user` varchar(140),
+`client_secret` varchar(140),
+`skip_authorization` tinyint NOT NULL DEFAULT 0,
+`scopes` text DEFAULT 'all openid',
+`redirect_uris` text,
+`default_redirect_uri` varchar(140),
+`grant_type` varchar(140),
+`response_type` varchar(140) DEFAULT 'Code',
+`_user_tags` text,
+`_comments` text,
+`_assign` text,
+`_liked_by` text,
+index creation(creation))
+			ENGINE=InnoDB
+			ROW_FORMAT=DYNAMIC
+			CHARACTER SET=utf8mb4
+			COLLATE=utf8mb4_unicode_ci
+2024-08-29 12:50:20,852 WARNING database DDL Query made to DB:
+create table `tabWebhook Data` (
+			name varchar(140) primary key,
+			creation datetime(6),
+			modified datetime(6),
+			modified_by varchar(140),
+			owner varchar(140),
+			docstatus tinyint not null default '0',
+			idx int not null default '0',
+			`fieldname` varchar(140),
+`key` varchar(140),
+parent varchar(140),
+parentfield varchar(140),
+parenttype varchar(140),
+index parent(parent))
+			ENGINE=InnoDB
+			ROW_FORMAT=DYNAMIC
+			CHARACTER SET=utf8mb4
+			COLLATE=utf8mb4_unicode_ci
+2024-08-29 12:50:20,908 WARNING database DDL Query made to DB:
+create table `tabOAuth Authorization Code` (
+			name varchar(140) primary key,
+			creation datetime(6),
+			modified datetime(6),
+			modified_by varchar(140),
+			owner varchar(140),
+			docstatus tinyint not null default '0',
+			idx int not null default '0',
+			`client` varchar(140),
+`user` varchar(140),
+`scopes` text,
+`authorization_code` varchar(140) UNIQUE,
+`expiration_time` datetime(6),
+`redirect_uri_bound_to_authorization_code` varchar(140),
+`validity` varchar(140),
+`nonce` varchar(140),
+`code_challenge` varchar(140),
+`code_challenge_method` varchar(140),
+`_user_tags` text,
+`_comments` text,
+`_assign` text,
+`_liked_by` text,
+index creation(creation))
+			ENGINE=InnoDB
+			ROW_FORMAT=DYNAMIC
+			CHARACTER SET=utf8mb4
+			COLLATE=utf8mb4_unicode_ci
+2024-08-29 12:50:20,958 WARNING database DDL Query made to DB:
+create table `tabGoogle Contacts` (
+			name varchar(140) primary key,
+			creation datetime(6),
+			modified datetime(6),
+			modified_by varchar(140),
+			owner varchar(140),
+			docstatus tinyint not null default '0',
+			idx int not null default '0',
+			`enable` tinyint NOT NULL DEFAULT 0,
+`email_id` varchar(140),
+`last_sync_on` datetime(6),
+`authorization_code` text,
+`refresh_token` text,
+`next_sync_token` text,
+`pull_from_google_contacts` tinyint NOT NULL DEFAULT 0,
+`push_to_google_contacts` tinyint NOT NULL DEFAULT 0,
+`_user_tags` text,
+`_comments` text,
+`_assign` text,
+`_liked_by` text,
+index creation(creation))
+			ENGINE=InnoDB
+			ROW_FORMAT=DYNAMIC
+			CHARACTER SET=utf8mb4
+			COLLATE=utf8mb4_unicode_ci
+2024-08-29 12:50:21,455 WARNING database DDL Query made to DB:
+create table `tabWebhook Header` (
+			name varchar(140) primary key,
+			creation datetime(6),
+			modified datetime(6),
+			modified_by varchar(140),
+			owner varchar(140),
+			docstatus tinyint not null default '0',
+			idx int not null default '0',
+			`key` text,
+`value` text,
+parent varchar(140),
+parentfield varchar(140),
+parenttype varchar(140),
+index parent(parent))
+			ENGINE=InnoDB
+			ROW_FORMAT=DYNAMIC
+			CHARACTER SET=utf8mb4
+			COLLATE=utf8mb4_unicode_ci
+2024-08-29 12:50:21,489 WARNING database DDL Query made to DB:
+create table `tabSlack Webhook URL` (
+			name varchar(140) primary key,
+			creation datetime(6),
+			modified datetime(6),
+			modified_by varchar(140),
+			owner varchar(140),
+			docstatus tinyint not null default '0',
+			idx int not null default '0',
+			`webhook_name` varchar(140) UNIQUE,
+`webhook_url` varchar(140),
+`show_document_link` tinyint NOT NULL DEFAULT 1,
+`_user_tags` text,
+`_comments` text,
+`_assign` text,
+`_liked_by` text,
+index creation(creation))
+			ENGINE=InnoDB
+			ROW_FORMAT=DYNAMIC
+			CHARACTER SET=utf8mb4
+			COLLATE=utf8mb4_unicode_ci
+2024-08-29 12:50:21,535 WARNING database DDL Query made to DB:
+create table `tabConnected App` (
+			name varchar(140) primary key,
+			creation datetime(6),
+			modified datetime(6),
+			modified_by varchar(140),
+			owner varchar(140),
+			docstatus tinyint not null default '0',
+			idx int not null default '0',
+			`provider_name` varchar(140),
+`openid_configuration` varchar(140),
+`client_id` varchar(140),
+`redirect_uri` varchar(140),
+`client_secret` text,
+`authorization_uri` text,
+`token_uri` varchar(140),
+`revocation_uri` varchar(140),
+`userinfo_uri` varchar(140),
+`introspection_uri` varchar(140),
+`_user_tags` text,
+`_comments` text,
+`_assign` text,
+`_liked_by` text,
+index creation(creation))
+			ENGINE=InnoDB
+			ROW_FORMAT=DYNAMIC
+			CHARACTER SET=utf8mb4
+			COLLATE=utf8mb4_unicode_ci
+2024-08-29 12:50:21,602 WARNING database DDL Query made to DB:
+create table `tabOAuth Bearer Token` (
+			name varchar(140) primary key,
+			creation datetime(6),
+			modified datetime(6),
+			modified_by varchar(140),
+			owner varchar(140),
+			docstatus tinyint not null default '0',
+			idx int not null default '0',
+			`client` varchar(140),
+`user` varchar(140),
+`scopes` text,
+`access_token` varchar(140) UNIQUE,
+`refresh_token` varchar(140),
+`expiration_time` datetime(6),
+`expires_in` int NOT NULL DEFAULT 0,
+`status` varchar(140),
+`_user_tags` text,
+`_comments` text,
+`_assign` text,
+`_liked_by` text,
+index creation(creation))
+			ENGINE=InnoDB
+			ROW_FORMAT=DYNAMIC
+			CHARACTER SET=utf8mb4
+			COLLATE=utf8mb4_unicode_ci
+2024-08-29 12:50:21,635 WARNING database DDL Query made to DB:
+create table `tabQuery Parameters` (
+			name varchar(140) primary key,
+			creation datetime(6),
+			modified datetime(6),
+			modified_by varchar(140),
+			owner varchar(140),
+			docstatus tinyint not null default '0',
+			idx int not null default '0',
+			`key` varchar(140),
+`value` varchar(140),
+parent varchar(140),
+parentfield varchar(140),
+parenttype varchar(140),
+index parent(parent))
+			ENGINE=InnoDB
+			ROW_FORMAT=DYNAMIC
+			CHARACTER SET=utf8mb4
+			COLLATE=utf8mb4_unicode_ci
+2024-08-29 12:50:21,685 WARNING database DDL Query made to DB:
+create table `tabSocial Login Key` (
+			name varchar(140) primary key,
+			creation datetime(6),
+			modified datetime(6),
+			modified_by varchar(140),
+			owner varchar(140),
+			docstatus tinyint not null default '0',
+			idx int not null default '0',
+			`enable_social_login` tinyint NOT NULL DEFAULT 0,
+`social_login_provider` varchar(140) DEFAULT 'Custom',
+`client_id` varchar(140),
+`provider_name` varchar(140),
+`client_secret` text,
+`icon` varchar(140),
+`base_url` varchar(140),
+`sign_ups` varchar(140),
+`authorize_url` varchar(140),
+`access_token_url` varchar(140),
+`redirect_url` varchar(140),
+`api_endpoint` varchar(140),
+`custom_base_url` tinyint NOT NULL DEFAULT 0,
+`api_endpoint_args` longtext,
+`auth_url_data` longtext,
+`user_id_property` varchar(140),
+`_user_tags` text,
+`_comments` text,
+`_assign` text,
+`_liked_by` text,
+index creation(creation))
+			ENGINE=InnoDB
+			ROW_FORMAT=DYNAMIC
+			CHARACTER SET=utf8mb4
+			COLLATE=utf8mb4_unicode_ci
+2024-08-29 12:50:21,749 WARNING database DDL Query made to DB:
+create table `tabOAuth Client Role` (
+			name varchar(140) primary key,
+			creation datetime(6),
+			modified datetime(6),
+			modified_by varchar(140),
+			owner varchar(140),
+			docstatus tinyint not null default '0',
+			idx int not null default '0',
+			`role` varchar(140),
+parent varchar(140),
+parentfield varchar(140),
+parenttype varchar(140),
+index parent(parent))
+			ENGINE=InnoDB
+			ROW_FORMAT=DYNAMIC
+			CHARACTER SET=utf8mb4
+			COLLATE=utf8mb4_unicode_ci
+2024-08-29 12:50:21,783 WARNING database DDL Query made to DB:
+create table `tabOAuth Scope` (
+			name varchar(140) primary key,
+			creation datetime(6),
+			modified datetime(6),
+			modified_by varchar(140),
+			owner varchar(140),
+			docstatus tinyint not null default '0',
+			idx int not null default '0',
+			`scope` varchar(140),
+parent varchar(140),
+parentfield varchar(140),
+parenttype varchar(140),
+index parent(parent))
+			ENGINE=InnoDB
+			ROW_FORMAT=DYNAMIC
+			CHARACTER SET=utf8mb4
+			COLLATE=utf8mb4_unicode_ci
+2024-08-29 12:50:21,822 WARNING database DDL Query made to DB:
+create table `tabGoogle Calendar` (
+			name varchar(140) primary key,
+			creation datetime(6),
+			modified datetime(6),
+			modified_by varchar(140),
+			owner varchar(140),
+			docstatus tinyint not null default '0',
+			idx int not null default '0',
+			`enable` tinyint NOT NULL DEFAULT 1,
+`calendar_name` varchar(140) UNIQUE,
+`user` varchar(140),
+`pull_from_google_calendar` tinyint NOT NULL DEFAULT 1,
+`push_to_google_calendar` tinyint NOT NULL DEFAULT 1,
+`google_calendar_id` varchar(140),
+`refresh_token` text,
+`authorization_code` text,
+`next_sync_token` text,
+`_user_tags` text,
+`_comments` text,
+`_assign` text,
+`_liked_by` text,
+index creation(creation))
+			ENGINE=InnoDB
+			ROW_FORMAT=DYNAMIC
+			CHARACTER SET=utf8mb4
+			COLLATE=utf8mb4_unicode_ci
+2024-08-29 12:50:21,901 WARNING database DDL Query made to DB:
+create table `tabNetwork Printer Settings` (
+			name varchar(140) primary key,
+			creation datetime(6),
+			modified datetime(6),
+			modified_by varchar(140),
+			owner varchar(140),
+			docstatus tinyint not null default '0',
+			idx int not null default '0',
+			`server_ip` varchar(140) DEFAULT 'localhost',
+`port` int NOT NULL DEFAULT 631,
+`printer_name` varchar(140),
+`_user_tags` text,
+`_comments` text,
+`_assign` text,
+`_liked_by` text,
+index creation(creation))
+			ENGINE=InnoDB
+			ROW_FORMAT=DYNAMIC
+			CHARACTER SET=utf8mb4
+			COLLATE=utf8mb4_unicode_ci
+2024-08-29 12:50:22,075 WARNING database DDL Query made to DB:
+create table `tabPrint Format Field Template` (
+			name varchar(140) primary key,
+			creation datetime(6),
+			modified datetime(6),
+			modified_by varchar(140),
+			owner varchar(140),
+			docstatus tinyint not null default '0',
+			idx int not null default '0',
+			`document_type` varchar(140),
+`field` varchar(140),
+`template_file` varchar(140),
+`module` varchar(140),
+`standard` tinyint NOT NULL DEFAULT 0,
+`template` longtext,
+`_user_tags` text,
+`_comments` text,
+`_assign` text,
+`_liked_by` text,
+index creation(creation))
+			ENGINE=InnoDB
+			ROW_FORMAT=DYNAMIC
+			CHARACTER SET=utf8mb4
+			COLLATE=utf8mb4_unicode_ci
+2024-08-29 12:50:22,114 WARNING database DDL Query made to DB:
+create table `tabPrint Heading` (
+			name varchar(140) primary key,
+			creation datetime(6),
+			modified datetime(6),
+			modified_by varchar(140),
+			owner varchar(140),
+			docstatus tinyint not null default '0',
+			idx int not null default '0',
+			`print_heading` varchar(140) UNIQUE,
+`description` text,
+`_user_tags` text,
+`_comments` text,
+`_assign` text,
+`_liked_by` text,
+index creation(creation))
+			ENGINE=InnoDB
+			ROW_FORMAT=DYNAMIC
+			CHARACTER SET=utf8mb4
+			COLLATE=utf8mb4_unicode_ci
+2024-08-29 12:50:22,163 WARNING database DDL Query made to DB:
+create table `tabLetter Head` (
+			name varchar(140) primary key,
+			creation datetime(6),
+			modified datetime(6),
+			modified_by varchar(140),
+			owner varchar(140),
+			docstatus tinyint not null default '0',
+			idx int not null default '0',
+			`letter_head_name` varchar(140) UNIQUE,
+`source` varchar(140),
+`footer_source` varchar(140) DEFAULT 'HTML',
+`disabled` tinyint NOT NULL DEFAULT 0,
+`is_default` tinyint NOT NULL DEFAULT 0,
+`image` text,
+`image_height` decimal(21,9) NOT NULL DEFAULT 0.0,
+`image_width` decimal(21,9) NOT NULL DEFAULT 0.0,
+`align` varchar(140) DEFAULT 'Left',
+`content` longtext,
+`footer` longtext,
+`footer_image` text,
+`footer_image_height` decimal(21,9) NOT NULL DEFAULT 0.0,
+`footer_image_width` decimal(21,9) NOT NULL DEFAULT 0.0,
+`footer_align` varchar(140),
+`header_script` longtext,
+`footer_script` longtext,
+`_user_tags` text,
+`_comments` text,
+`_assign` text,
+`_liked_by` text,
+index `is_default`(`is_default`),
+index creation(creation))
+			ENGINE=InnoDB
+			ROW_FORMAT=DYNAMIC
+			CHARACTER SET=utf8mb4
+			COLLATE=utf8mb4_unicode_ci
+2024-08-29 12:50:22,293 WARNING database DDL Query made to DB:
+create table `tabGender` (
+			name varchar(140) primary key,
+			creation datetime(6),
+			modified datetime(6),
+			modified_by varchar(140),
+			owner varchar(140),
+			docstatus tinyint not null default '0',
+			idx int not null default '0',
+			`gender` varchar(140) UNIQUE,
+`_user_tags` text,
+`_comments` text,
+`_assign` text,
+`_liked_by` text,
+index creation(creation))
+			ENGINE=InnoDB
+			ROW_FORMAT=DYNAMIC
+			CHARACTER SET=utf8mb4
+			COLLATE=utf8mb4_unicode_ci
+2024-08-29 12:50:22,424 WARNING database DDL Query made to DB:
+create table `tabAddress Template` (
+			name varchar(140) primary key,
+			creation datetime(6),
+			modified datetime(6),
+			modified_by varchar(140),
+			owner varchar(140),
+			docstatus tinyint not null default '0',
+			idx int not null default '0',
+			`country` varchar(140) UNIQUE,
+`is_default` tinyint NOT NULL DEFAULT 0,
+`template` longtext,
+`_user_tags` text,
+`_comments` text,
+`_assign` text,
+`_liked_by` text,
+index creation(creation))
+			ENGINE=InnoDB
+			ROW_FORMAT=DYNAMIC
+			CHARACTER SET=utf8mb4
+			COLLATE=utf8mb4_unicode_ci
+2024-08-29 12:50:22,459 WARNING database DDL Query made to DB:
+create table `tabSalutation` (
+			name varchar(140) primary key,
+			creation datetime(6),
+			modified datetime(6),
+			modified_by varchar(140),
+			owner varchar(140),
+			docstatus tinyint not null default '0',
+			idx int not null default '0',
+			`salutation` varchar(140) UNIQUE,
+`_user_tags` text,
+`_comments` text,
+`_assign` text,
+`_liked_by` text,
+index creation(creation))
+			ENGINE=InnoDB
+			ROW_FORMAT=DYNAMIC
+			CHARACTER SET=utf8mb4
+			COLLATE=utf8mb4_unicode_ci
+2024-08-29 12:50:22,529 WARNING database DDL Query made to DB:
+create table `tabContact Email` (
+			name varchar(140) primary key,
+			creation datetime(6),
+			modified datetime(6),
+			modified_by varchar(140),
+			owner varchar(140),
+			docstatus tinyint not null default '0',
+			idx int not null default '0',
+			`email_id` varchar(140),
+`is_primary` tinyint NOT NULL DEFAULT 0,
+parent varchar(140),
+parentfield varchar(140),
+parenttype varchar(140),
+index parent(parent))
+			ENGINE=InnoDB
+			ROW_FORMAT=DYNAMIC
+			CHARACTER SET=utf8mb4
+			COLLATE=utf8mb4_unicode_ci
+2024-08-29 12:50:22,580 WARNING database DDL Query made to DB:
+create table `tabAddress` (
+			name varchar(140) primary key,
+			creation datetime(6),
+			modified datetime(6),
+			modified_by varchar(140),
+			owner varchar(140),
+			docstatus tinyint not null default '0',
+			idx int not null default '0',
+			`address_title` varchar(140),
+`address_type` varchar(140),
+`address_line1` varchar(240),
+`address_line2` varchar(240),
+`city` varchar(140),
+`county` varchar(140),
+`state` varchar(140),
+`country` varchar(140),
+`pincode` varchar(140),
+`email_id` varchar(140),
+`phone` varchar(140),
+`fax` varchar(140),
+`is_primary_address` tinyint NOT NULL DEFAULT 0,
+`is_shipping_address` tinyint NOT NULL DEFAULT 0,
+`disabled` tinyint NOT NULL DEFAULT 0,
+`_user_tags` text,
+`_comments` text,
+`_assign` text,
+`_liked_by` text,
+index `city`(`city`),
+index `country`(`country`),
+index `pincode`(`pincode`),
+index creation(creation))
+			ENGINE=InnoDB
+			ROW_FORMAT=DYNAMIC
+			CHARACTER SET=utf8mb4
+			COLLATE=utf8mb4_unicode_ci
+2024-08-29 12:50:22,654 WARNING database DDL Query made to DB:
+create table `tabContact Phone` (
+			name varchar(140) primary key,
+			creation datetime(6),
+			modified datetime(6),
+			modified_by varchar(140),
+			owner varchar(140),
+			docstatus tinyint not null default '0',
+			idx int not null default '0',
+			`phone` varchar(140),
+`is_primary_phone` tinyint NOT NULL DEFAULT 0,
+`is_primary_mobile_no` tinyint NOT NULL DEFAULT 0,
+parent varchar(140),
+parentfield varchar(140),
+parenttype varchar(140),
+index parent(parent))
+			ENGINE=InnoDB
+			ROW_FORMAT=DYNAMIC
+			CHARACTER SET=utf8mb4
+			COLLATE=utf8mb4_unicode_ci
+2024-08-29 12:50:22,751 WARNING database DDL Query made to DB:
+create table `tabContact` (
+			name varchar(140) primary key,
+			creation datetime(6),
+			modified datetime(6),
+			modified_by varchar(140),
+			owner varchar(140),
+			docstatus tinyint not null default '0',
+			idx int not null default '0',
+			`first_name` varchar(140),
+`middle_name` varchar(140),
+`last_name` varchar(140),
+`full_name` varchar(140),
+`email_id` varchar(140),
+`user` varchar(140),
+`address` varchar(140),
+`sync_with_google_contacts` tinyint NOT NULL DEFAULT 0,
+`status` varchar(140) DEFAULT 'Passive',
+`salutation` varchar(140),
+`designation` varchar(140),
+`gender` varchar(140),
+`phone` varchar(140),
+`mobile_no` varchar(140),
+`company_name` varchar(140),
+`image` text,
+`google_contacts` varchar(140),
+`google_contacts_id` varchar(140),
+`pulled_from_google_contacts` tinyint NOT NULL DEFAULT 0,
+`is_primary_contact` tinyint NOT NULL DEFAULT 0,
+`department` varchar(140),
+`unsubscribed` tinyint NOT NULL DEFAULT 0,
+`_user_tags` text,
+`_comments` text,
+`_assign` text,
+`_liked_by` text,
+index `email_id`(`email_id`),
+index creation(creation))
+			ENGINE=InnoDB
+			ROW_FORMAT=DYNAMIC
+			CHARACTER SET=utf8mb4
+			COLLATE=utf8mb4_unicode_ci
+2024-08-29 12:50:22,836 WARNING database DDL Query made to DB:
+create table `tabEnergy Point Rule` (
+			name varchar(140) primary key,
+			creation datetime(6),
+			modified datetime(6),
+			modified_by varchar(140),
+			owner varchar(140),
+			docstatus tinyint not null default '0',
+			idx int not null default '0',
+			`enabled` tinyint NOT NULL DEFAULT 1,
+`rule_name` varchar(140) UNIQUE,
+`reference_doctype` varchar(140),
+`for_doc_event` varchar(140) DEFAULT 'Custom',
+`field_to_check` varchar(140),
+`points` int NOT NULL DEFAULT 0,
+`for_assigned_users` tinyint NOT NULL DEFAULT 0,
+`user_field` varchar(140),
+`multiplier_field` varchar(140),
+`max_points` int NOT NULL DEFAULT 0,
+`apply_only_once` tinyint NOT NULL DEFAULT 0,
+`condition` longtext,
+`_user_tags` text,
+`_comments` text,
+`_assign` text,
+`_liked_by` text,
+index creation(creation))
+			ENGINE=InnoDB
+			ROW_FORMAT=DYNAMIC
+			CHARACTER SET=utf8mb4
+			COLLATE=utf8mb4_unicode_ci
+2024-08-29 12:50:22,954 WARNING database DDL Query made to DB:
+create table `tabReview Level` (
+			name varchar(140) primary key,
+			creation datetime(6),
+			modified datetime(6),
+			modified_by varchar(140),
+			owner varchar(140),
+			docstatus tinyint not null default '0',
+			idx int not null default '0',
+			`level_name` varchar(140) UNIQUE,
+`role` varchar(140) UNIQUE,
+`review_points` int NOT NULL DEFAULT 0,
+parent varchar(140),
+parentfield varchar(140),
+parenttype varchar(140),
+index parent(parent))
+			ENGINE=InnoDB
+			ROW_FORMAT=DYNAMIC
+			CHARACTER SET=utf8mb4
+			COLLATE=utf8mb4_unicode_ci
+2024-08-29 12:50:23,065 WARNING database DDL Query made to DB:
+create table `tabEnergy Point Log` (
+			name varchar(140) primary key,
+			creation datetime(6),
+			modified datetime(6),
+			modified_by varchar(140),
+			owner varchar(140),
+			docstatus tinyint not null default '0',
+			idx int not null default '0',
+			`user` varchar(140),
+`type` varchar(140),
+`points` int NOT NULL DEFAULT 0,
+`rule` varchar(140),
+`reference_doctype` varchar(140),
+`reference_name` varchar(140),
+`reverted` tinyint NOT NULL DEFAULT 0,
+`revert_of` varchar(140),
+`reason` text,
+`seen` tinyint NOT NULL DEFAULT 0,
+`_user_tags` text,
+`_comments` text,
+`_assign` text,
+`_liked_by` text,
+index `user`(`user`),
+index `reference_name`(`reference_name`),
+index creation(creation))
+			ENGINE=InnoDB
+			ROW_FORMAT=DYNAMIC
+			CHARACTER SET=utf8mb4
+			COLLATE=utf8mb4_unicode_ci
+2024-08-29 12:50:23,108 WARNING database DDL Query made to DB:
+create table `tabAssignment Rule` (
+			name varchar(140) primary key,
+			creation datetime(6),
+			modified datetime(6),
+			modified_by varchar(140),
+			owner varchar(140),
+			docstatus tinyint not null default '0',
+			idx int not null default '0',
+			`document_type` varchar(140),
+`due_date_based_on` varchar(140),
+`priority` int NOT NULL DEFAULT 0,
+`disabled` tinyint NOT NULL DEFAULT 0,
+`description` text DEFAULT 'Automatic Assignment',
+`assign_condition` longtext,
+`unassign_condition` longtext,
+`close_condition` longtext,
+`rule` varchar(140),
+`field` varchar(140),
+`last_user` varchar(140),
+`_user_tags` text,
+`_comments` text,
+`_assign` text,
+`_liked_by` text,
+index creation(creation))
+			ENGINE=InnoDB
+			ROW_FORMAT=DYNAMIC
+			CHARACTER SET=utf8mb4
+			COLLATE=utf8mb4_unicode_ci
+2024-08-29 12:50:23,235 WARNING database DDL Query made to DB:
+create table `tabMilestone` (
+			name varchar(140) primary key,
+			creation datetime(6),
+			modified datetime(6),
+			modified_by varchar(140),
+			owner varchar(140),
+			docstatus tinyint not null default '0',
+			idx int not null default '0',
+			`reference_type` varchar(140),
+`reference_name` varchar(140),
+`track_field` varchar(140),
+`value` varchar(140),
+`milestone_tracker` varchar(140),
+`_user_tags` text,
+`_comments` text,
+`_assign` text,
+`_liked_by` text,
+index `reference_type`(`reference_type`),
+index creation(creation))
+			ENGINE=InnoDB
+			ROW_FORMAT=DYNAMIC
+			CHARACTER SET=utf8mb4
+			COLLATE=utf8mb4_unicode_ci
+2024-08-29 12:50:23,251 WARNING database DDL Query made to DB:
+ALTER TABLE `tabMilestone`
+				ADD INDEX `reference_type_reference_name_index`(reference_type, reference_name)
+2024-08-29 12:50:23,287 WARNING database DDL Query made to DB:
+create table `tabAssignment Rule User` (
+			name varchar(140) primary key,
+			creation datetime(6),
+			modified datetime(6),
+			modified_by varchar(140),
+			owner varchar(140),
+			docstatus tinyint not null default '0',
+			idx int not null default '0',
+			`user` varchar(140),
+parent varchar(140),
+parentfield varchar(140),
+parenttype varchar(140),
+index parent(parent))
+			ENGINE=InnoDB
+			ROW_FORMAT=DYNAMIC
+			CHARACTER SET=utf8mb4
+			COLLATE=utf8mb4_unicode_ci
+2024-08-29 12:50:23,356 WARNING database DDL Query made to DB:
+create table `tabAuto Repeat` (
+			name varchar(140) primary key,
+			creation datetime(6),
+			modified datetime(6),
+			modified_by varchar(140),
+			owner varchar(140),
+			docstatus tinyint not null default '0',
+			idx int not null default '0',
+			`disabled` tinyint NOT NULL DEFAULT 0,
+`reference_doctype` varchar(140),
+`reference_document` varchar(140),
+`submit_on_creation` tinyint NOT NULL DEFAULT 0,
+`start_date` date,
+`end_date` date,
+`frequency` varchar(140),
+`repeat_on_day` int NOT NULL DEFAULT 0,
+`repeat_on_last_day` tinyint NOT NULL DEFAULT 0,
+`next_schedule_date` date,
+`notify_by_email` tinyint NOT NULL DEFAULT 0,
+`recipients` text,
+`template` varchar(140),
+`subject` varchar(140),
+`message` text DEFAULT 'Please find attached {{ doc.doctype }} #{{ doc.name }}',
+`print_format` varchar(140),
+`status` varchar(140),
+`_user_tags` text,
+`_comments` text,
+`_assign` text,
+`_liked_by` text,
+index `next_schedule_date`(`next_schedule_date`),
+index creation(creation))
+			ENGINE=InnoDB
+			ROW_FORMAT=DYNAMIC
+			CHARACTER SET=utf8mb4
+			COLLATE=utf8mb4_unicode_ci
+2024-08-29 12:50:23,395 WARNING database DDL Query made to DB:
+create table `tabMilestone Tracker` (
+			name varchar(140) primary key,
+			creation datetime(6),
+			modified datetime(6),
+			modified_by varchar(140),
+			owner varchar(140),
+			docstatus tinyint not null default '0',
+			idx int not null default '0',
+			`document_type` varchar(140) UNIQUE,
+`track_field` varchar(140),
+`disabled` tinyint NOT NULL DEFAULT 0,
+`_user_tags` text,
+`_comments` text,
+`_assign` text,
+`_liked_by` text,
+index creation(creation))
+			ENGINE=InnoDB
+			ROW_FORMAT=DYNAMIC
+			CHARACTER SET=utf8mb4
+			COLLATE=utf8mb4_unicode_ci
+2024-08-29 12:50:23,429 WARNING database DDL Query made to DB:
+create table `tabAuto Repeat Day` (
+			name varchar(140) primary key,
+			creation datetime(6),
+			modified datetime(6),
+			modified_by varchar(140),
+			owner varchar(140),
+			docstatus tinyint not null default '0',
+			idx int not null default '0',
+			`day` varchar(140),
+parent varchar(140),
+parentfield varchar(140),
+parenttype varchar(140),
+index parent(parent))
+			ENGINE=InnoDB
+			ROW_FORMAT=DYNAMIC
+			CHARACTER SET=utf8mb4
+			COLLATE=utf8mb4_unicode_ci
+2024-08-29 12:50:23,462 WARNING database DDL Query made to DB:
+create table `tabReminder` (
+			name varchar(140) primary key,
+			creation datetime(6),
+			modified datetime(6),
+			modified_by varchar(140),
+			owner varchar(140),
+			docstatus tinyint not null default '0',
+			idx int not null default '0',
+			`user` varchar(140),
+`remind_at` datetime(6),
+`description` text,
+`reminder_doctype` varchar(140),
+`reminder_docname` varchar(140),
+`notified` tinyint NOT NULL DEFAULT 0,
+`_user_tags` text,
+`_comments` text,
+`_assign` text,
+`_liked_by` text,
+index `user`(`user`),
+index `remind_at`(`remind_at`),
+index creation(creation))
+			ENGINE=InnoDB
+			ROW_FORMAT=DYNAMIC
+			CHARACTER SET=utf8mb4
+			COLLATE=utf8mb4_unicode_ci
+2024-08-29 12:50:23,492 WARNING database DDL Query made to DB:
+create table `tabAssignment Rule Day` (
+			name varchar(140) primary key,
+			creation datetime(6),
+			modified datetime(6),
+			modified_by varchar(140),
+			owner varchar(140),
+			docstatus tinyint not null default '0',
+			idx int not null default '0',
+			`day` varchar(140),
+parent varchar(140),
+parentfield varchar(140),
+parenttype varchar(140),
+index parent(parent))
+			ENGINE=InnoDB
+			ROW_FORMAT=DYNAMIC
+			CHARACTER SET=utf8mb4
+			COLLATE=utf8mb4_unicode_ci
+2024-08-29 12:54:24,962 WARNING database DDL Query made to DB:
+create table `tabArticle` (
+			name varchar(140) primary key,
+			creation datetime(6),
+			modified datetime(6),
+			modified_by varchar(140),
+			owner varchar(140),
+			docstatus tinyint not null default '0',
+			idx int not null default '0',
+			`_user_tags` text,
+`_comments` text,
+`_assign` text,
+`_liked_by` text,
+index creation(creation))
+			ENGINE=InnoDB
+			ROW_FORMAT=DYNAMIC
+			CHARACTER SET=utf8mb4
+			COLLATE=utf8mb4_unicode_ci
+2024-08-29 12:58:31,778 WARNING database DDL Query made to DB:
+ALTER TABLE `tabArticle` ADD COLUMN `article_name` varchar(140), ADD COLUMN `author` varchar(140), ADD COLUMN `image` text, ADD COLUMN `isbn` varchar(140), ADD COLUMN `status` varchar(140), ADD COLUMN `publisher` varchar(140), ADD COLUMN `description` longtext
+2024-08-29 13:07:42,528 WARNING database DDL Query made to DB:
+ALTER TABLE `tabArticle` ADD UNIQUE INDEX IF NOT EXISTS article_name (`article_name`)
+2024-08-29 13:12:20,435 WARNING database DDL Query made to DB:
+create table `tabLibrary Member` (
+			name varchar(140) primary key,
+			creation datetime(6),
+			modified datetime(6),
+			modified_by varchar(140),
+			owner varchar(140),
+			docstatus tinyint not null default '0',
+			idx int not null default '0',
+			`_user_tags` text,
+`_comments` text,
+`_assign` text,
+`_liked_by` text,
+index creation(creation))
+			ENGINE=InnoDB
+			ROW_FORMAT=DYNAMIC
+			CHARACTER SET=utf8mb4
+			COLLATE=utf8mb4_unicode_ci
+2024-08-29 13:14:21,399 WARNING database DDL Query made to DB:
+ALTER TABLE `tabLibrary Member` ADD COLUMN `first_name` varchar(140), ADD COLUMN `last_name` varchar(140), ADD COLUMN `full_name` varchar(140), ADD COLUMN `email_address` varchar(140), ADD COLUMN `phone_number` varchar(140)
+2024-08-29 13:30:40,453 WARNING database DDL Query made to DB:
+create table `tabLibrary Membership` (
+			name varchar(140) primary key,
+			creation datetime(6),
+			modified datetime(6),
+			modified_by varchar(140),
+			owner varchar(140),
+			docstatus tinyint not null default '0',
+			idx int not null default '0',
+			`_user_tags` text,
+`_comments` text,
+`_assign` text,
+`_liked_by` text,
+index creation(creation))
+			ENGINE=InnoDB
+			ROW_FORMAT=DYNAMIC
+			CHARACTER SET=utf8mb4
+			COLLATE=utf8mb4_unicode_ci
+2024-08-29 13:36:47,036 WARNING database DDL Query made to DB:
+ALTER TABLE `tabLibrary Membership` ADD COLUMN `amended_from` varchar(140)
+2024-08-29 13:36:47,045 WARNING database DDL Query made to DB:
+ALTER TABLE `tabLibrary Membership` ADD INDEX `amended_from_index`(`amended_from`)
+2024-08-29 13:42:25,283 WARNING database DDL Query made to DB:
+ALTER TABLE `tabLibrary Membership` ADD COLUMN `library_member` varchar(140)
+2024-08-29 13:43:16,633 WARNING database DDL Query made to DB:
+ALTER TABLE `tabLibrary Membership` ADD COLUMN `full_name` varchar(140), ADD COLUMN `from_date` date, ADD COLUMN `to_date` date, ADD COLUMN `paid` tinyint NOT NULL DEFAULT 0
+2024-08-29 13:55:47,359 WARNING database DDL Query made to DB:
+create table `tabLibrary Transaction` (
+			name varchar(140) primary key,
+			creation datetime(6),
+			modified datetime(6),
+			modified_by varchar(140),
+			owner varchar(140),
+			docstatus tinyint not null default '0',
+			idx int not null default '0',
+			`amended_from` varchar(140),
+`_user_tags` text,
+`_comments` text,
+`_assign` text,
+`_liked_by` text,
+index `amended_from`(`amended_from`),
+index creation(creation))
+			ENGINE=InnoDB
+			ROW_FORMAT=DYNAMIC
+			CHARACTER SET=utf8mb4
+			COLLATE=utf8mb4_unicode_ci
+2024-08-29 13:58:34,461 WARNING database DDL Query made to DB:
+ALTER TABLE `tabLibrary Transaction` ADD COLUMN `article` varchar(140), ADD COLUMN `library_member` varchar(140), ADD COLUMN `type` varchar(140), ADD COLUMN `date` date
+2024-08-29 14:17:01,689 WARNING database DDL Query made to DB:
+ALTER TABLE `tabArticle` ADD COLUMN `route` varchar(140), ADD COLUMN `published` tinyint NOT NULL DEFAULT 0
+2024-08-29 14:24:58,616 WARNING database DDL Query made to DB:
+ALTER TABLE `tabArticle` MODIFY `published` tinyint NOT NULL DEFAULT 0
+2024-08-29 14:28:57,369 WARNING database DDL Query made to DB:
+ALTER TABLE `tabArticle` MODIFY `published` tinyint NOT NULL DEFAULT 0
+2024-08-29 14:30:49,127 WARNING database DDL Query made to DB:
+ALTER TABLE `tabArticle` MODIFY `published` tinyint NOT NULL DEFAULT 0

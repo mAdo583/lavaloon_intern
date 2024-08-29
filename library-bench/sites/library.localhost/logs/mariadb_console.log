@@ -1,0 +1,7 @@
+_HiStOrY_V2_
+SELECT\040name\040FROM\040'tabUser'
+;
+select\040name\040from\040'tabUser';
+SELECT\040name\040FROM\040tabUser;
+select\040*\040from\040tabArticle;
+desc\040tabArticle;

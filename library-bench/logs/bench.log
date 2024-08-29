@@ -1,0 +1,98 @@
+2024-08-29 11:02:36,206 DEBUG cd library-bench && python3 -m venv env
+2024-08-29 11:02:38,124 DEBUG cd library-bench && /home/mohamed/library-bench/env/bin/python -m pip install --quiet --upgrade pip
+2024-08-29 11:02:39,241 DEBUG cd library-bench && /home/mohamed/library-bench/env/bin/python -m pip install --quiet wheel
+2024-08-29 11:02:40,066 LOG Getting frappe
+2024-08-29 11:02:40,066 DEBUG cd library-bench/apps && git clone https://github.com/frappe/frappe.git  --depth 1 --origin upstream
+2024-08-29 11:02:51,872 LOG Installing frappe
+2024-08-29 11:02:51,872 DEBUG cd /home/mohamed/library-bench && /home/mohamed/library-bench/env/bin/python -m pip install --quiet --upgrade -e /home/mohamed/library-bench/apps/frappe 
+2024-08-29 11:03:37,340 DEBUG cd /home/mohamed/library-bench/apps/frappe && yarn install --check-files
+2024-08-29 11:04:18,668 WARNING restart failed: Couldn't find supervisorctl in PATH
+2024-08-29 11:04:18,668 DEBUG cd library-bench && bench build
+2024-08-29 11:04:18,832 INFO /home/mohamed/venv/bin/bench build
+2024-08-29 11:04:31,931 LOG setting up backups
+2024-08-29 11:04:31,949 LOG backups were set up
+2024-08-29 11:04:31,949 INFO Bench library-bench initialized
+2024-08-29 11:08:14,785 INFO /home/mohamed/venv/bin/bench start
+2024-08-29 11:08:15,094 INFO /home/mohamed/venv/bin/bench serve --port 8001
+2024-08-29 11:08:15,118 INFO /home/mohamed/venv/bin/bench worker
+2024-08-29 11:08:15,138 INFO /home/mohamed/venv/bin/bench schedule
+2024-08-29 11:08:15,171 INFO /home/mohamed/venv/bin/bench watch
+2024-08-29 11:09:38,993 INFO /home/mohamed/venv/bin/bench start
+2024-08-29 11:09:39,346 INFO /home/mohamed/venv/bin/bench watch
+2024-08-29 11:09:39,347 INFO /home/mohamed/venv/bin/bench schedule
+2024-08-29 11:09:39,374 INFO /home/mohamed/venv/bin/bench serve --port 8001
+2024-08-29 11:09:39,401 INFO /home/mohamed/venv/bin/bench worker
+2024-08-29 11:13:11,206 INFO /home/mohamed/venv/bin/bench sites
+2024-08-29 11:14:09,845 INFO /home/mohamed/venv/bin/bench list-sites
+2024-08-29 11:16:19,069 INFO /home/mohamed/venv/bin/bench find .
+2024-08-29 11:16:57,129 INFO /home/mohamed/venv/bin/bench new-app library_management
+2024-08-29 11:16:57,133 LOG creating new app library_management
+2024-08-29 11:18:07,756 LOG Installing library_management
+2024-08-29 11:18:07,757 DEBUG cd /home/mohamed/library-bench && /home/mohamed/library-bench/env/bin/python -m pip install --quiet --upgrade -e /home/mohamed/library-bench/apps/library_management 
+2024-08-29 11:18:09,949 DEBUG bench build --app library_management
+2024-08-29 11:18:10,114 INFO /home/mohamed/venv/bin/bench build --app library_management
+2024-08-29 11:18:14,400 WARNING restart failed: Couldn't find supervisorctl in PATH
+2024-08-29 11:19:52,538 INFO /home/mohamed/venv/bin/bench new-site library.localhost
+2024-08-29 11:22:22,894 INFO /home/mohamed/venv/bin/bench new-site library.localhost
+2024-08-29 11:23:21,173 INFO /home/mohamed/venv/bin/bench new-site library.localhost
+2024-08-29 11:24:02,846 INFO /home/mohamed/venv/bin/bench new-site library.localhost
+2024-08-29 11:31:48,459 INFO /home/mohamed/venv/bin/bench new-site library.localhost
+2024-08-29 11:32:08,471 INFO /home/mohamed/venv/bin/bench new-site library.localhost
+2024-08-29 11:34:38,310 INFO /home/mohamed/venv/bin/bench --site library.localhost add-to-hosts
+2024-08-29 11:35:17,439 INFO /home/mohamed/venv/bin/bench start
+2024-08-29 11:35:17,731 INFO /home/mohamed/venv/bin/bench worker
+2024-08-29 11:35:17,737 INFO /home/mohamed/venv/bin/bench schedule
+2024-08-29 11:35:17,766 INFO /home/mohamed/venv/bin/bench watch
+2024-08-29 11:35:17,806 INFO /home/mohamed/venv/bin/bench serve --port 8001
+2024-08-29 11:40:07,344 INFO /home/mohamed/venv/bin/bench --site library.localhost install-app library_management
+2024-08-29 11:40:39,796 INFO /home/mohamed/venv/bin/bench --site library.localhost list-apps
+2024-08-29 11:41:26,495 INFO /home/mohamed/venv/bin/bench --site library.localhost console
+2024-08-29 11:42:40,655 INFO /home/mohamed/venv/bin/bench --site library.localhost mariadb
+2024-08-29 11:43:17,459 INFO /home/mohamed/venv/bin/bench --site library.localhost mariadb
+2024-08-29 12:23:23,798 INFO /home/mohamed/venv/bin/bench set-config -g developer_mode true
+2024-08-29 12:26:19,732 INFO /home/mohamed/venv/bin/bench start
+2024-08-29 12:26:20,103 INFO /home/mohamed/venv/bin/bench schedule
+2024-08-29 12:26:20,107 INFO /home/mohamed/venv/bin/bench worker
+2024-08-29 12:26:20,123 INFO /home/mohamed/venv/bin/bench watch
+2024-08-29 12:26:20,126 INFO /home/mohamed/venv/bin/bench serve --port 8001
+2024-08-29 12:39:33,156 INFO /home/mohamed/venv/bin/bench --site library.localhost mariadb
+2024-08-29 12:41:44,131 INFO /home/mohamed/venv/bin/bench new-site library.localhost
+2024-08-29 12:41:54,423 INFO /home/mohamed/venv/bin/bench new-site library.localhost
+2024-08-29 12:42:01,074 INFO /home/mohamed/venv/bin/bench new-site library.localhost --force
+2024-08-29 12:42:28,051 INFO /home/mohamed/venv/bin/bench --site library.localhost mariadb
+2024-08-29 12:43:19,249 INFO /home/mohamed/venv/bin/bench --site library.localhost mariadb
+2024-08-29 12:48:00,533 INFO /home/mohamed/venv/bin/bench start
+2024-08-29 12:48:00,823 INFO /home/mohamed/venv/bin/bench worker
+2024-08-29 12:48:00,836 INFO /home/mohamed/venv/bin/bench serve --port 8001
+2024-08-29 12:48:00,847 INFO /home/mohamed/venv/bin/bench watch
+2024-08-29 12:48:00,903 INFO /home/mohamed/venv/bin/bench schedule
+2024-08-29 12:49:11,391 INFO /home/mohamed/venv/bin/bench build
+2024-08-29 12:49:37,617 INFO /home/mohamed/venv/bin/bench start
+2024-08-29 12:49:37,905 INFO /home/mohamed/venv/bin/bench watch
+2024-08-29 12:49:37,909 INFO /home/mohamed/venv/bin/bench schedule
+2024-08-29 12:49:37,926 INFO /home/mohamed/venv/bin/bench serve --port 8001
+2024-08-29 12:49:38,048 INFO /home/mohamed/venv/bin/bench worker
+2024-08-29 12:49:55,501 INFO /home/mohamed/venv/bin/bench new-site library.localhost
+2024-08-29 12:50:01,678 INFO /home/mohamed/venv/bin/bench new-site library.localhost --force
+2024-08-29 12:51:15,771 INFO /home/mohamed/venv/bin/bench --site library.localhost add-to-hosts
+2024-08-29 12:51:40,951 INFO /home/mohamed/venv/bin/bench --site library.localhost install-app library_management
+2024-08-29 12:51:56,728 INFO /home/mohamed/venv/bin/bench --site library.localhost list-apps
+2024-08-29 12:53:15,207 INFO /home/mohamed/venv/bin/bench set-config -g developer_mode true
+2024-08-29 12:53:25,796 INFO /home/mohamed/venv/bin/bench start
+2024-08-29 12:53:26,078 INFO /home/mohamed/venv/bin/bench watch
+2024-08-29 12:53:26,095 INFO /home/mohamed/venv/bin/bench schedule
+2024-08-29 12:53:26,101 INFO /home/mohamed/venv/bin/bench worker
+2024-08-29 12:53:26,132 INFO /home/mohamed/venv/bin/bench serve --port 8001
+2024-08-29 12:59:35,823 INFO /home/mohamed/venv/bin/bench --site library.localhost mariadb
+2024-08-29 13:17:09,545 INFO /home/mohamed/venv/bin/bench start
+2024-08-29 13:17:09,806 INFO /home/mohamed/venv/bin/bench worker
+2024-08-29 13:17:09,806 INFO /home/mohamed/venv/bin/bench watch
+2024-08-29 13:17:09,823 INFO /home/mohamed/venv/bin/bench serve --port 8001
+2024-08-29 13:17:09,829 INFO /home/mohamed/venv/bin/bench schedule
+2024-08-29 13:18:03,511 INFO /home/mohamed/venv/bin/bench clear-cache
+2024-08-29 13:18:03,986 INFO /home/mohamed/venv/bin/bench build
+2024-08-29 13:18:24,488 INFO /home/mohamed/venv/bin/bench start
+2024-08-29 13:18:24,758 INFO /home/mohamed/venv/bin/bench schedule
+2024-08-29 13:18:24,768 INFO /home/mohamed/venv/bin/bench worker
+2024-08-29 13:18:24,771 INFO /home/mohamed/venv/bin/bench watch
+2024-08-29 13:18:24,791 INFO /home/mohamed/venv/bin/bench serve --port 8001

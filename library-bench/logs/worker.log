@@ -1,0 +1,127 @@
+2024-08-29 11:08:15,555 Worker rq:worker:0eb3a09d6f384e0097a1d8c7ff18530d started with PID 48505, version 1.16.2
+2024-08-29 11:08:15,555 Subscribing to channel rq:pubsub:0eb3a09d6f384e0097a1d8c7ff18530d
+2024-08-29 11:08:15,556 *** Listening on home-mohamed-library-bench:short, home-mohamed-library-bench:default, home-mohamed-library-bench:long...
+2024-08-29 11:08:15,557 Cleaning registries for queue: home-mohamed-library-bench:short
+2024-08-29 11:08:15,559 Cleaning registries for queue: home-mohamed-library-bench:default
+2024-08-29 11:08:15,560 Cleaning registries for queue: home-mohamed-library-bench:long
+2024-08-29 11:09:35,598 Worker 0eb3a09d6f384e0097a1d8c7ff18530d [PID 48505]: warm shut down requested
+2024-08-29 11:09:40,333 Worker rq:worker:3598f01ef56545b8947b6717a38d6bc9 started with PID 49701, version 1.16.2
+2024-08-29 11:09:40,334 Subscribing to channel rq:pubsub:3598f01ef56545b8947b6717a38d6bc9
+2024-08-29 11:09:40,336 *** Listening on home-mohamed-library-bench:short, home-mohamed-library-bench:default, home-mohamed-library-bench:long...
+2024-08-29 11:09:40,339 Cleaning registries for queue: home-mohamed-library-bench:short
+2024-08-29 11:09:40,341 Cleaning registries for queue: home-mohamed-library-bench:default
+2024-08-29 11:09:40,342 Cleaning registries for queue: home-mohamed-library-bench:long
+2024-08-29 11:10:52,291 Worker 3598f01ef56545b8947b6717a38d6bc9 [PID 49701]: warm shut down requested
+2024-08-29 11:35:17,972 Worker rq:worker:82cda02dfeec43ee999329a693a99f37 started with PID 54649, version 1.16.2
+2024-08-29 11:35:17,972 Subscribing to channel rq:pubsub:82cda02dfeec43ee999329a693a99f37
+2024-08-29 11:35:17,973 *** Listening on home-mohamed-library-bench:short, home-mohamed-library-bench:default, home-mohamed-library-bench:long...
+2024-08-29 11:35:17,973 Cleaning registries for queue: home-mohamed-library-bench:short
+2024-08-29 11:35:17,974 Cleaning registries for queue: home-mohamed-library-bench:default
+2024-08-29 11:35:17,975 Cleaning registries for queue: home-mohamed-library-bench:long
+2024-08-29 11:38:34,441 home-mohamed-library-bench:default: frappe.utils.background_jobs.execute_job(event=None, is_async=True, job_name='frappe.core.doctype.user.user.create_contact', kwargs={'user': <User: hamoodyalsayed2003@gmail.com>, 'ignore_mandatory': True}, method='frappe.core.doctype.user.user.create_contact', site='library.localhost', user='Administrator') (library.localhost::38be9ad0-fd92-4d56-a8d7-22e718581f07)
+2024-08-29 11:38:36,115 home-mohamed-library-bench:default: Job OK (library.localhost::38be9ad0-fd92-4d56-a8d7-22e718581f07)
+2024-08-29 11:38:36,115 Result is kept for 600 seconds
+2024-08-29 11:38:36,124 home-mohamed-library-bench:default: frappe.utils.background_jobs.execute_job(event=None, is_async=True, job_name='frappe.core.doctype.user.user.update_gravatar', kwargs={'name': 'hamoodyalsayed2003@gmail.com'}, method='frappe.core.doctype.user.user.update_gravatar', site='library.localhost', user='Administrator') (library.localhost::b5916a0d-7972-44e0-9066-e89012baeb44)
+2024-08-29 11:38:36,483 home-mohamed-library-bench:default: Job OK (library.localhost::b5916a0d-7972-44e0-9066-e89012baeb44)
+2024-08-29 11:38:36,483 Result is kept for 600 seconds
+2024-08-29 11:45:21,531 Cleaning registries for queue: home-mohamed-library-bench:short
+2024-08-29 11:45:21,547 Cleaning registries for queue: home-mohamed-library-bench:default
+2024-08-29 11:45:21,548 Cleaning registries for queue: home-mohamed-library-bench:long
+2024-08-29 12:22:39,077 Cleaning registries for queue: home-mohamed-library-bench:short
+2024-08-29 12:22:39,092 Cleaning registries for queue: home-mohamed-library-bench:default
+2024-08-29 12:22:39,093 Cleaning registries for queue: home-mohamed-library-bench:long
+2024-08-29 12:26:15,583 Worker 82cda02dfeec43ee999329a693a99f37 [PID 54649]: warm shut down requested
+2024-08-29 12:26:15,588 Unsubscribing from channel rq:pubsub:82cda02dfeec43ee999329a693a99f37
+2024-08-29 12:26:20,356 Worker rq:worker:5dc229fcc67d454687bb519916ec2d25 started with PID 58956, version 1.16.2
+2024-08-29 12:26:20,356 Subscribing to channel rq:pubsub:5dc229fcc67d454687bb519916ec2d25
+2024-08-29 12:26:20,359 *** Listening on home-mohamed-library-bench:short, home-mohamed-library-bench:default, home-mohamed-library-bench:long...
+2024-08-29 12:26:20,360 Cleaning registries for queue: home-mohamed-library-bench:short
+2024-08-29 12:26:20,361 Cleaning registries for queue: home-mohamed-library-bench:default
+2024-08-29 12:26:20,361 Cleaning registries for queue: home-mohamed-library-bench:long
+2024-08-29 12:39:50,599 Cleaning registries for queue: home-mohamed-library-bench:short
+2024-08-29 12:39:50,701 Cleaning registries for queue: home-mohamed-library-bench:default
+2024-08-29 12:39:50,704 Cleaning registries for queue: home-mohamed-library-bench:long
+2024-08-29 12:47:56,925 Worker 5dc229fcc67d454687bb519916ec2d25 [PID 58956]: warm shut down requested
+2024-08-29 12:48:01,214 Worker rq:worker:b4b0f63d509e479f9e319c16d474fba5 started with PID 66336, version 1.16.2
+2024-08-29 12:48:01,214 Subscribing to channel rq:pubsub:b4b0f63d509e479f9e319c16d474fba5
+2024-08-29 12:48:01,215 *** Listening on home-mohamed-library-bench:short, home-mohamed-library-bench:default, home-mohamed-library-bench:long...
+2024-08-29 12:48:01,216 Cleaning registries for queue: home-mohamed-library-bench:short
+2024-08-29 12:48:01,216 Cleaning registries for queue: home-mohamed-library-bench:default
+2024-08-29 12:48:01,217 Cleaning registries for queue: home-mohamed-library-bench:long
+2024-08-29 12:48:58,959 Worker b4b0f63d509e479f9e319c16d474fba5 [PID 66336]: warm shut down requested
+2024-08-29 12:48:58,969 Unsubscribing from channel rq:pubsub:b4b0f63d509e479f9e319c16d474fba5
+2024-08-29 12:49:38,364 Worker rq:worker:9499e317fb8b4722a9f8bb13322b067d started with PID 67184, version 1.16.2
+2024-08-29 12:49:38,365 Subscribing to channel rq:pubsub:9499e317fb8b4722a9f8bb13322b067d
+2024-08-29 12:49:38,366 *** Listening on home-mohamed-library-bench:short, home-mohamed-library-bench:default, home-mohamed-library-bench:long...
+2024-08-29 12:49:38,367 Cleaning registries for queue: home-mohamed-library-bench:short
+2024-08-29 12:49:38,368 Cleaning registries for queue: home-mohamed-library-bench:default
+2024-08-29 12:49:38,369 Cleaning registries for queue: home-mohamed-library-bench:long
+2024-08-29 12:53:22,527 Worker 9499e317fb8b4722a9f8bb13322b067d [PID 67184]: warm shut down requested
+2024-08-29 12:53:26,401 Worker rq:worker:5b6660323e584bc18f7d3288b6be30c8 started with PID 69380, version 1.16.2
+2024-08-29 12:53:26,401 Subscribing to channel rq:pubsub:5b6660323e584bc18f7d3288b6be30c8
+2024-08-29 12:53:26,402 *** Listening on home-mohamed-library-bench:short, home-mohamed-library-bench:default, home-mohamed-library-bench:long...
+2024-08-29 12:53:26,402 Cleaning registries for queue: home-mohamed-library-bench:short
+2024-08-29 12:53:26,404 Cleaning registries for queue: home-mohamed-library-bench:default
+2024-08-29 12:53:26,405 Cleaning registries for queue: home-mohamed-library-bench:long
+2024-08-29 13:06:56,670 Cleaning registries for queue: home-mohamed-library-bench:short
+2024-08-29 13:06:56,778 Cleaning registries for queue: home-mohamed-library-bench:default
+2024-08-29 13:06:56,783 Cleaning registries for queue: home-mohamed-library-bench:long
+2024-08-29 13:17:06,011 Worker 5b6660323e584bc18f7d3288b6be30c8 [PID 69380]: warm shut down requested
+2024-08-29 13:17:10,085 Worker rq:worker:a3bb19c0ac85459db502676b100421e3 started with PID 78175, version 1.16.2
+2024-08-29 13:17:10,085 Subscribing to channel rq:pubsub:a3bb19c0ac85459db502676b100421e3
+2024-08-29 13:17:10,087 *** Listening on home-mohamed-library-bench:short, home-mohamed-library-bench:default, home-mohamed-library-bench:long...
+2024-08-29 13:17:10,088 Cleaning registries for queue: home-mohamed-library-bench:short
+2024-08-29 13:17:10,089 Cleaning registries for queue: home-mohamed-library-bench:default
+2024-08-29 13:17:10,090 Cleaning registries for queue: home-mohamed-library-bench:long
+2024-08-29 13:18:00,779 Worker a3bb19c0ac85459db502676b100421e3 [PID 78175]: warm shut down requested
+2024-08-29 13:18:00,787 Unsubscribing from channel rq:pubsub:a3bb19c0ac85459db502676b100421e3
+2024-08-29 13:18:25,002 Worker rq:worker:7710f739ec034dc1aa2a686ea82a3acc started with PID 79189, version 1.16.2
+2024-08-29 13:18:25,002 Subscribing to channel rq:pubsub:7710f739ec034dc1aa2a686ea82a3acc
+2024-08-29 13:18:25,004 *** Listening on home-mohamed-library-bench:short, home-mohamed-library-bench:default, home-mohamed-library-bench:long...
+2024-08-29 13:18:25,004 Cleaning registries for queue: home-mohamed-library-bench:short
+2024-08-29 13:18:25,005 Cleaning registries for queue: home-mohamed-library-bench:default
+2024-08-29 13:18:25,005 Cleaning registries for queue: home-mohamed-library-bench:long
+2024-08-29 13:31:55,183 Cleaning registries for queue: home-mohamed-library-bench:short
+2024-08-29 13:31:55,225 Cleaning registries for queue: home-mohamed-library-bench:default
+2024-08-29 13:31:55,227 Cleaning registries for queue: home-mohamed-library-bench:long
+2024-08-29 13:45:25,428 Cleaning registries for queue: home-mohamed-library-bench:short
+2024-08-29 13:45:25,438 Cleaning registries for queue: home-mohamed-library-bench:default
+2024-08-29 13:45:25,439 Cleaning registries for queue: home-mohamed-library-bench:long
+2024-08-29 13:58:55,545 Cleaning registries for queue: home-mohamed-library-bench:short
+2024-08-29 13:58:55,554 Cleaning registries for queue: home-mohamed-library-bench:default
+2024-08-29 13:58:55,555 Cleaning registries for queue: home-mohamed-library-bench:long
+2024-08-29 14:12:25,666 Cleaning registries for queue: home-mohamed-library-bench:short
+2024-08-29 14:12:25,673 Cleaning registries for queue: home-mohamed-library-bench:default
+2024-08-29 14:12:25,677 Cleaning registries for queue: home-mohamed-library-bench:long
+2024-08-29 14:21:36,550 home-mohamed-library-bench:default: frappe.utils.background_jobs.execute_job(event=None, is_async=True, job_name='frappe.search.website_search.update_index_for_path', kwargs={'path': 'articles/test3'}, method=<function update_index_for_path at 0x70b90781ac00>, site='library.localhost', user='Administrator') (library.localhost::9d3e7460-783b-4cf1-ab2b-9ebb153bc0a8)
+2024-08-29 14:21:38,020 home-mohamed-library-bench:default: Job OK (library.localhost::9d3e7460-783b-4cf1-ab2b-9ebb153bc0a8)
+2024-08-29 14:21:38,021 Result is kept for 600 seconds
+2024-08-29 14:28:23,125 Cleaning registries for queue: home-mohamed-library-bench:short
+2024-08-29 14:28:23,128 Cleaning registries for queue: home-mohamed-library-bench:default
+2024-08-29 14:28:23,129 Cleaning registries for queue: home-mohamed-library-bench:long
+2024-08-29 14:41:53,245 Cleaning registries for queue: home-mohamed-library-bench:short
+2024-08-29 14:41:53,248 Cleaning registries for queue: home-mohamed-library-bench:default
+2024-08-29 14:41:53,249 Cleaning registries for queue: home-mohamed-library-bench:long
+2024-08-29 14:43:30,326 home-mohamed-library-bench:default: frappe.utils.background_jobs.execute_job(event=None, is_async=True, job_name='frappe.search.website_search.update_index_for_path', kwargs={'path': 'articles/test3'}, method=<function update_index_for_path at 0x70b90781ac00>, site='library.localhost', user='Administrator') (library.localhost::df899d24-e7d0-464c-8339-368e65c8f001)
+2024-08-29 14:43:31,891 home-mohamed-library-bench:default: Job OK (library.localhost::df899d24-e7d0-464c-8339-368e65c8f001)
+2024-08-29 14:43:31,891 Result is kept for 600 seconds
+2024-08-29 14:43:38,150 home-mohamed-library-bench:default: frappe.utils.background_jobs.execute_job(event=None, is_async=True, job_name='frappe.search.website_search.update_index_for_path', kwargs={'path': 'articles/test3'}, method=<function update_index_for_path at 0x70b90781ac00>, site='library.localhost', user='Administrator') (library.localhost::c8a0eed9-db6a-4d80-b36f-97a7e1b2fffe)
+2024-08-29 14:43:38,648 home-mohamed-library-bench:default: Job OK (library.localhost::c8a0eed9-db6a-4d80-b36f-97a7e1b2fffe)
+2024-08-29 14:43:38,648 Result is kept for 600 seconds
+2024-08-29 14:44:23,006 home-mohamed-library-bench:default: frappe.utils.background_jobs.execute_job(event=None, is_async=True, job_name='frappe.search.website_search.update_index_for_path', kwargs={'path': 'articles/test3'}, method=<function update_index_for_path at 0x70b90781ac00>, site='library.localhost', user='Administrator') (library.localhost::f9999ddd-7a04-462c-8bb4-134ba67dc523)
+2024-08-29 14:44:23,714 home-mohamed-library-bench:default: Job OK (library.localhost::f9999ddd-7a04-462c-8bb4-134ba67dc523)
+2024-08-29 14:44:23,714 Result is kept for 600 seconds
+2024-08-29 14:44:50,367 home-mohamed-library-bench:default: frappe.utils.background_jobs.execute_job(event=None, is_async=True, job_name='frappe.model.document.execute_action', kwargs={'__doctype': 'Article', '__name': 'test3', '__action': '_rename', 'name': ..., method='frappe.model.document.execute_action', site='library.localhost', user='Administrator') (library.localhost::89447ff2-c727-4a3b-86a3-68794f393637)
+2024-08-29 14:44:51,411 home-mohamed-library-bench:default: Job OK (library.localhost::89447ff2-c727-4a3b-86a3-68794f393637)
+2024-08-29 14:44:51,411 Result is kept for 600 seconds
+2024-08-29 14:44:51,420 home-mohamed-library-bench:default: frappe.utils.background_jobs.execute_job(event=None, is_async=True, job_name='frappe.utils.global_search.rebuild_for_doctype', kwargs={'doctype': 'Article'}, method='frappe.utils.global_search.rebuild_for_doctype', site='library.localhost', user='Administrator') (library.localhost::8af0a2a6-86da-49c6-b0bb-aa2a53f7d683)
+2024-08-29 14:44:51,629 home-mohamed-library-bench:default: Job OK (library.localhost::8af0a2a6-86da-49c6-b0bb-aa2a53f7d683)
+2024-08-29 14:44:51,629 Result is kept for 600 seconds
+2024-08-29 14:48:01,330 home-mohamed-library-bench:default: frappe.utils.background_jobs.execute_job(event=None, is_async=True, job_name='frappe.search.website_search.update_index_for_path', kwargs={'path': 'articles/5-feet-apart'}, method=<function update_index_for_path at 0x70b90781ac00>, site='library.localhost', user='Administrator') (library.localhost::ae938bbb-ba68-4ac8-869b-a7e1e4ff72b6)
+2024-08-29 14:48:01,852 home-mohamed-library-bench:default: Job OK (library.localhost::ae938bbb-ba68-4ac8-869b-a7e1e4ff72b6)
+2024-08-29 14:48:01,852 Result is kept for 600 seconds
+2024-08-29 14:54:46,999 Cleaning registries for queue: home-mohamed-library-bench:short
+2024-08-29 14:54:47,026 Cleaning registries for queue: home-mohamed-library-bench:default
+2024-08-29 14:54:47,028 Cleaning registries for queue: home-mohamed-library-bench:long
+2024-08-29 14:55:59,246 Worker 7710f739ec034dc1aa2a686ea82a3acc [PID 79189]: warm shut down requested
+2024-08-29 14:55:59,300 Unsubscribing from channel rq:pubsub:7710f739ec034dc1aa2a686ea82a3acc
